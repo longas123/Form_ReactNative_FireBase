@@ -2,8 +2,9 @@
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 4624,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "packagerPid": 2608,
+  "expoServerNgrokUrl": "https://gz-x7e.t14g.form-reactnative-firebase.exp.direct",
+  "packagerNgrokUrl": "https://packager.gz-x7e.t14g.form-reactnative-firebase.exp.direct",
+  "ngrokPid": 10636,
+  "webpackServerPort": null
 }
