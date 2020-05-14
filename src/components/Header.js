@@ -18,11 +18,11 @@ const styles = StyleSheet.create({
   header: {
       paddingTop: 64,
       paddingBottom: 16,
-      backgroundColor: "orange",
+      backgroundColor: "#EFECF4",
       alignItems: "center",
       justifyContent: "center",
       borderBottomWidth: 1,
-      borderBottomColor: "black",
+      borderBottomColor: "#EBECF4",
       marginBottom: 24, 
   },
 });

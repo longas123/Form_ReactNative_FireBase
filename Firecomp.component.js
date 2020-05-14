@@ -33,22 +33,22 @@ class FireComp extends Component{
         const items = [];
 
         return(
-            <View >
+            <View style={styles.container}>
                 <TextInput 
                 value={this.state.nome}
-                style={{height: 40, width: '100%', borderColor: '#000', borderWidth: 2, marginBottom: 20}}
+                style={{borderRadius:18,paddingLeft:10,height: 40, width: '100%', borderColor: '#000', borderWidth: 2, marginBottom: 20}}
                 onChangeText={(text)=> this.setState({nome: text})}
                 placeholder='Nome'
                 />
 
                 <TextInput 
                 value={this.state.idade}
-                style={{height: 40, width: '100%', borderColor: '#000', borderWidth: 2, marginBottom: 20}}
+                style={{borderRadius:18,paddingLeft:10,height: 40, width: '100%', borderColor: '#000', borderWidth: 2, marginBottom: 20}}
                 onChangeText={(text)=> this.setState({idade: text})}
                 placeholder='Idade'
                 />
 
-                <Button title='Enviar' onPress={() => this.handleCreate(this.state)}  />
+                <Button Style={{borderRadius:18}} title='Enviar' onPress={() => this.handleCreate(this.state)}  />
 
                 <Text style={{margin: 10}}>Gambiarra visual</Text>
                 <Button title='Listar' onPress={() => this.handleFetch()}  />
@@ -70,3 +70,10 @@ class FireComp extends Component{
 }
 
 export default FireComp;
+
+const styles = StyleSheet.create({
+    container:{
+      padding:10,
+      paddingBottom: 1,
+    },
+})

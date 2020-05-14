@@ -13,42 +13,11 @@ export default class App extends Component {
   }
   
   render() {
-    const name = [
-      {id:'1',name: 'adalto'},
-      {id:'1',name: 'adalto'},
-      {id:'1',name: 'adalto'},
-      {id:'1',name: 'adalto'},
-      {id:'1',name: 'adalto'},
-      {id:'1',name: 'adalto'},
-      {id:'1',name: 'adalto'},
-      {id:'1',name: 'adalto'},
-      {id:'1',name: 'adalto'},
-      {id:'1',name: 'adalto'},
-      {id:'1',name: 'adalto'},
-      {id:'1',name: 'adalto'},
-    ]
-    const age = [
-      {id:'1',age: '44'},
-      {id:'1',age: '44'},
-      {id:'1',age: '44'},
-      {id:'1',age: '44'},
-    ]
-    return (
-      
+    return ( 
       <View style={styles.container}>
         <Header/>
         <FireComp />
-
-        <FlatList 
-        data={name}
-        keyExtractor={item => item.id}
-        renderItem={({item}) => (
-          <Lista
-          data={item} />
-          )}
-        />
-        <Text>Olá mundo</Text>
-        <FireComp />
+        <Lista />
       </View>
     );
   }
