@@ -33,7 +33,7 @@ class FireComp extends Component{
         const items = [];
 
         return(
-            <View>
+            <View >
                 <TextInput 
                 value={this.state.nome}
                 style={{height: 40, width: '100%', borderColor: '#000', borderWidth: 2, marginBottom: 20}}

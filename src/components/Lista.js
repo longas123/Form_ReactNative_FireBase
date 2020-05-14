@@ -3,23 +3,16 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-nativ
 
 function Lista({data}){
     return(
-    <View >
-        <Text  style={{borderRadius:8,marginTop:8,padding: 10,flex:1, heigth:1, backgroundColor: '#DDD'}}>{data.name}</Text>
+    <View style={styles.container}>
+        <Text  style={{borderRadius:18,marginTop:8,padding: 10,flex:1, heigth:1, backgroundColor: '#DDD'}}>{data.name}</Text>
     </View>
 )}
 
 export default Lista
 
-/* const styles = StyleSheet.create({
+const styles = StyleSheet.create({
     container:{
-        width: "100%",
-        height: 25,
-        backgroundColor: "green",
-        borderRadius: 8,
-        padding: 24,
+      padding:10,
+      paddingBottom: 1,
     },
-    text:{
-     fontWeight: "bold",
-     fontSize: 18,
-    }
-}) */
+})
