@@ -47,6 +47,8 @@ export default class App extends Component {
           data={item} />
           )}
         />
+        <Text>Olá mundo</Text>
+        <FireComp />
       </View>
     );
   }
