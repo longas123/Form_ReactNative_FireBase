@@ -1,24 +1,37 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, Button, TextInput, Text} from 'react-native';
 import Firebase, {createUser, fetchUsers} from './firebase.utils';
+import './warn.fix';
 
 class FireComp extends Component{
+    
 
     state = { nome: '', idade : '', users : []};
 
     handleCreate = ({nome, idade}) =>{
         createUser(nome, idade);
+        this.setState({ nome: '', idade: ''});
     }
 
     handleFetch = async () => {
         const users = await fetchUsers();
-        this.setState({ users : users});
+        const usersData = [];
+
+        let ids = Object.keys(users);
+        
+        ids.map(id => {
+            let data = users[id];
+            usersData.push(data); 
+        })
+
+        this.setState({ users : usersData});
     }
 
     
     render(){
-        const { nome , idade, users } = this.state;
-        // console.log(users);
+        const {  users } = this.state;
+        const items = [];
+
         return(
             <View>
                 <TextInput 
@@ -41,8 +54,13 @@ class FireComp extends Component{
                 <Button title='Listar' onPress={() => this.handleFetch()}  />
                 
                 {
-                    this.state.users.map(user => console.log(user))
-                }
+                    this.state.users.map(({nome , idade}) => {
+                        return(
+                            <Text key={nome}>Nome: {nome} | Idade: {idade}</Text>
+                        )
+                    })
+                }             
+               
                 
             </View>
 

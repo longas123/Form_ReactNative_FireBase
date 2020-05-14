@@ -19,11 +19,11 @@ export const createUser = async (nome, idade) => {
 
 export const fetchUsers = async () => {
 
-    const ar = [];
+    let ar = {};
     
     firebase.database().ref('/users')
         .on('value', snapshot => {
-            ar.push(snapshot.val())
+            ar = snapshot.val();
     })
 
    return await ar;
