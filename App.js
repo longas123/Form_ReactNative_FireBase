@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Button, Text, FlatList } from 'react-native';
-import  FireComp from './Firecomp.component';
+import { View, StyleSheet, Button, Text } from 'react-native';
+import  FireComp from './src/components/Firecomp.component';
 import Header from './src/components/Header'
 import Lista from './src/components/Lista'
 
-
+ 
 
 export default class App extends Component {
-  handleSubmit = () => {
-    const value = this._form.getValue();
-    console.log('value: ', value);
-  }
   
   render() {
     return ( 
@@ -28,5 +24,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     backgroundColor: '#ffffff',
   },
+  header: {
+    height: '10%'
+  },
+  formulario: { height: '30%'}
 });
 
