@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "form",
+    "name": "Servicinhos",
     "slug": "form",
     "platforms": [
       "ios",
@@ -23,6 +23,10 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.servicinhos.servicinhos",
+      "versionCode": 1
     }
   }
 }

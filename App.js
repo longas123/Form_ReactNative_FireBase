@@ -1,38 +1,9 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Button } from 'react-native';
+import { View, StyleSheet, Button, Text, FlatList } from 'react-native';
+import  FireComp from './Firecomp.component';
+import Header from './src/components/Header'
+import Lista from './src/components/Lista'
 
-import t from 'tcomb-form-native';
-
-const Form = t.form.Form;
-
-const User = t.struct({
-  name: t.String,
-  age: t.int,
-});
-
-const formStyles = {
-  ...Form.stylesheet,
-  formGroup: {
-    normal: {
-      marginBottom: 10
-    },
-  },
-  controlLabel: {
-    normal: {
-      color: 'blue',
-      fontSize: 18,
-      marginBottom: 7,
-      fontWeight: '600'
-    },
-    // the style applied when a validation error occours
-    error: {
-      color: 'red',
-      fontSize: 18,
-      marginBottom: 7,
-      fontWeight: '600'
-    }
-  }
-}
 
 
 export default class App extends Component {
@@ -42,15 +13,39 @@ export default class App extends Component {
   }
   
   render() {
+    const name = [
+      {id:'1',name: 'adalto'},
+      {id:'1',name: 'adalto'},
+      {id:'1',name: 'adalto'},
+      {id:'1',name: 'adalto'},
+      {id:'1',name: 'adalto'},
+      {id:'1',name: 'adalto'},
+      {id:'1',name: 'adalto'},
+      {id:'1',name: 'adalto'},
+      {id:'1',name: 'adalto'},
+      {id:'1',name: 'adalto'},
+      {id:'1',name: 'adalto'},
+      {id:'1',name: 'adalto'},
+    ]
+    const age = [
+      {id:'1',age: '44'},
+      {id:'1',age: '44'},
+      {id:'1',age: '44'},
+      {id:'1',age: '44'},
+    ]
     return (
+      
       <View style={styles.container}>
-        <Form 
-          ref={c => this._form = c}
-          type={User} 
-        />
-        <Button
-          title="Validar"
-          onPress={this.handleSubmit}
+        <Header/>
+        <FireComp />
+
+        <FlatList 
+        data={name}
+        keyExtractor={item => item.id}
+        renderItem={({item}) => (
+          <Lista
+          data={item} />
+          )}
         />
       </View>
     );
@@ -65,3 +60,4 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
   },
 });
+
